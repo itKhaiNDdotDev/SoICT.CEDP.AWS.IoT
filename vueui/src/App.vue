@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <FixHeader/>
-    <fix-sidebar></fix-sidebar>
-    <FixContent/>
+    <FixSidebar @showCamView="onSbowCamView"/>
+    <FixContent ref="content"/>
     <fix-footer></fix-footer>
   </div>
 </template>
@@ -20,11 +20,19 @@ export default {
     FixSidebar,
     FixContent,
     FixFooter
-  }
+  },
+
+  methods: {
+    onSbowCamView(value) {
+      this.$refs.content.setIsShowCamView(value);
+    }
+  },
 }
 </script>
 
 <style>
+@import url(./styles/components/items/button.css);
+
   * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;

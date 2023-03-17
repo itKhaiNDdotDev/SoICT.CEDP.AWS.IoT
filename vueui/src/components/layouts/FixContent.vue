@@ -1,15 +1,29 @@
 .<template>
   <div class="content">
-    <themal-cam></themal-cam>
+    <!-- <thermal-cam></thermal-cam> -->
+    <!-- <div class="content__title">My Car Tracking - Temperature Sensor</div> -->
+    <router-view :isShowCamView=isShowCamView></router-view>
   </div>
 </template>
 
 <script>
-import ThemalCam from './../../views/ThemalCam.vue';
+// import ThermalCam from '../../views/ThermalCam.vue';
 
 export default {
   name: "FixContent",
-  components: { ThemalCam },
+  // components: { ThermalCam },
+
+  data() {
+    return {
+      isShowCamView: true
+    }
+  },
+
+  methods: {
+    setIsShowCamView(value) {
+      this.isShowCamView = value;
+    }
+  },
 }
 </script>
 

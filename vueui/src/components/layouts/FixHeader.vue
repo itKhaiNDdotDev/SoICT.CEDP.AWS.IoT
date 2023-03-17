@@ -3,7 +3,7 @@
     <div class="header__left">
       <div class="logo-hust-soict"></div>
       <div class="logo-aws"></div>
-      <div class="header--title">Themal Camera Data Monitor System on AWS IoT Platform</div>
+      <div class="header--title">Thermal Camera Data Monitor System on AWS IoT Platform</div>
     </div>
     <div class="header__right">
       <noti-popup></noti-popup>
